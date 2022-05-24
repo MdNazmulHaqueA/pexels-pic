@@ -1,13 +1,107 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Montserrat", sans-serif;
+
+  background-color: #1a1c1e;
+  transition: all 0.3s;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.search {
+  background: linear-gradient(#0000008c, #000000d1),
+    url(https://picsum.photos/1080/720?random=1);
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.header {
+  position: relative;
+}
+.header-wrapper {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search-btn {
+  background: #fff;
+  border-radius: 5px;
+  color: #000;
+  font-size: 20px;
+  padding: 9px 50px;
+  border: solid #333 1px;
+  outline: none;
+  text-decoration: none;
+}
+
+.search-btn:hover {
+  background: #eeeeee;
+  /* background-image: linear-gradient(to bottom, #fff, rgb(181, 215, 255)); */
+  text-decoration: none;
+}
+
+.search-content h1,
+.search-content p {
+  color: #fff;
+}
+.search-content h1 {
+  font-size: 120px;
+}
+
+.search-content p {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 35px;
+}
+
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.search-wrapper input {
+  width: 80%;
+  padding: 12px;
+  position: relative;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.footer {
+  color: #ddd;
+  padding-top: 30px;
+  font-weight: 300;
+  letter-spacing: 1;
+}
+
+@media screen and (max-width: 992px) {
+  .search-content h1 {
+    font-size: 75px;
+    transition: all 0.3s;
+  }
+}
+@media screen and (max-width: 576px) {
+  .search-content h1 {
+    font-size: 60px;
+    transition: all 0.3s;
+  }
+  .search-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .search-wrapper input {
+    width: 100%;
+  }
+  .search-wrapper input,
+  .search-wrapper button {
+    padding: 8px;
+  }
+  .search-wrapper button {
+    padding: 6px 45px;
+  }
 }
